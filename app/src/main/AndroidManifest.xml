@@ -19,7 +19,7 @@
             android:name=".ListadoBocadillos"
             android:exported="false" />
         <activity
-            android:name=".RegistroDePedidos"
+            android:name=".RegistroPedidos"
             android:exported="false" />
         <activity
             android:name=".PedirBocadillo"

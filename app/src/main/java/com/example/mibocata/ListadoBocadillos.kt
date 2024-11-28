@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,7 @@ import java.time.format.TextStyle
 import java.util.Locale
 
 class ListadoBocadillos : AppCompatActivity() {
-    private lateinit var botonPedir: ImageButton
+    private lateinit var botonRegistroPedidos: ImageButton
     private lateinit var botonPerfil: ImageButton
 
     @SuppressLint("MissingSuperCall", "MissingInflatedId")
@@ -34,16 +35,21 @@ class ListadoBocadillos : AppCompatActivity() {
         }
 
         // Inicializar botones
-        botonPedir = findViewById(R.id.pedirBocadillo)
+        botonRegistroPedidos = findViewById(R.id.historicoPedidos)
         botonPerfil = findViewById(R.id.perfil)
 
         // Configurar listeners para los botones
-        botonPedir.setOnClickListener {
-            val intent = Intent(this, Pedir::class.java)
+        botonRegistroPedidos.setOnClickListener {
+            val intent = Intent(this, RegistroPedidos::class.java)
             startActivity(intent)
         }
         botonPerfil.setOnClickListener {
-            val intent = Intent(this, RegistroDePedidos::class.java)
+            val intent = Intent(this, Perfil::class.java)
+            startActivity(intent)
+        }
+        val imagenPedir: ImageView = findViewById(R.id.imageBocata)
+        imagenPedir.setOnClickListener{
+            val intent = Intent(this,Pedir::class.java)
             startActivity(intent)
         }
 

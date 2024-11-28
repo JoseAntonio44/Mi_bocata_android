@@ -18,8 +18,9 @@ import java.time.format.TextStyle
 import java.util.Locale
 
 class Pedir : AppCompatActivity() {
+    private lateinit var botonRegistroPedidos : ImageButton
     private lateinit var botonPerfil : ImageButton
-    private lateinit var botonHistorico : ImageButton
+    private lateinit var botonListadoBocadillos : ImageButton
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,18 +32,24 @@ class Pedir : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        botonRegistroPedidos = findViewById(R.id.historicoPedidos)
         botonPerfil = findViewById(R.id.perfil)
-        botonHistorico = findViewById(R.id.historicoPedidos)
+        botonListadoBocadillos = findViewById(R.id.listaBocatas)
 
+
+        botonRegistroPedidos.setOnClickListener {
+            val intent = Intent(this,RegistroPedidos::class.java)
+            startActivity(intent)
+        }
         botonPerfil.setOnClickListener {
             val intent = Intent(this,Perfil::class.java)
             startActivity(intent)
         }
-        botonHistorico.setOnClickListener {
+        botonListadoBocadillos.setOnClickListener {
             val intent = Intent(this,ListadoBocadillos::class.java)
             startActivity(intent)
         }
+
 
         val botonFrios = findViewById<Button>(R.id.botonFrios)
         val botonCalientes = findViewById<Button>(R.id.botonCalientes)

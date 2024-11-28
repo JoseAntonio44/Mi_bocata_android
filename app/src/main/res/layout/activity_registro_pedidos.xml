@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/paredblanca"
-    tools:context=".RegistroDePedidos">
+    tools:context=".RegistroPedidos">
 
     <View
         android:id="@+id/view3"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageBocata"
         android:layout_width="168dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
@@ -60,7 +60,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/historicoPedidos"
+        android:id="@+id/listaBocatas"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="@null"
@@ -73,7 +73,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/pedirBocadillo"
+        android:id="@+id/historicoPedidos"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
