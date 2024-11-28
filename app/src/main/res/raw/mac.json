@@ -1,0 +1,14 @@
+{
+  "authorized_macs": [
+    "00:1A:2B:3C:4D:5E",
+    "11:22:33:44:55:66",
+    "AA:BB:CC:DD:EE:FF",
+    "12:34:56:78:9A:BC",
+    "98:76:54:32:10:FE",
+    "0F:1E:2D:3C:4B:5A",
+    "AB:CD:EF:12:34:56",
+    "DE:AD:BE:EF:FE:ED",
+    "CA:FE:BA:BE:12:34",
+    "FA:CE:B0:0C:DA:12"
+  ]
+}

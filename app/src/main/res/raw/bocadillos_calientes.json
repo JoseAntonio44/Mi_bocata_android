@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Lomo con Pimientos",
+    "diaSemana": "Lunes"
+  },
+  {
+    "nombre": "Bacon y Queso",
+    "diaSemana": "Martes"
+  },
+  {
+    "nombre": "Tortilla Española",
+    "diaSemana": "Miércoles"
+  },
+  {
+    "nombre": "Chorizo a la Plancha",
+    "diaSemana": "Jueves"
+  },
+  {
+    "nombre": "Pechuga de Pollo",
+    "diaSemana": "Viernes"
+  }
+]

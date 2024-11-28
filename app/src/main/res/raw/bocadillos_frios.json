@@ -1,0 +1,22 @@
+[
+      {
+        "nombre": "Jamón y Queso",
+        "diaSemana": "Lunes"
+      },
+      {
+        "nombre": "Atún con Tomate",
+        "diaSemana": "Martes"
+      },
+      {
+        "nombre": "Vegetal",
+        "diaSemana": "Miércoles"
+      },
+      {
+        "nombre": "Pollo y Mayonesa",
+        "diaSemana": "Jueves"
+      },
+      {
+        "nombre": "Queso y Aguacate",
+        "diaSemana": "Viernes"
+      }
+    ]
