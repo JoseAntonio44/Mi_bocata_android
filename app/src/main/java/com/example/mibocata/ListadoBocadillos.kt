@@ -93,7 +93,7 @@ class ListadoBocadillos : AppCompatActivity() {
 
     private fun bocadilloMannana(calienteMannana: TextView, frioMannana: TextView) {
         // Cargar los JSON
-        val bocatasFrios = loadBocadillos(this, R.raw.bocadillos_frios) // Usar función generalizada
+        val bocatasFrios = loadBocadillos(this, R.raw.bocadillos_frios)
         val bocatasCalientes = loadBocadillos(this, R.raw.bocadillos_calientes)
 
         val manana = LocalDate.now().dayOfWeek.plus(1)

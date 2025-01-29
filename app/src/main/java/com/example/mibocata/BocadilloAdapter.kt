@@ -9,7 +9,7 @@ import android.widget.TextView
 
 class BocadilloAdapter (context: Context, bocadillo: List<Bocadillo>) : ArrayAdapter<Bocadillo>(context, 0, bocadillo) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item, parent, false)
+        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item_listado, parent, false)
 
         val bocadillo =getItem(position)
 

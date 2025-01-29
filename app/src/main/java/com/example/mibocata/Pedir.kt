@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,6 +22,9 @@ class Pedir : AppCompatActivity() {
     private lateinit var botonRegistroPedidos : ImageButton
     private lateinit var botonPerfil : ImageButton
     private lateinit var botonListadoBocadillos : ImageButton
+
+    private lateinit var botonPedirFrios : Button
+    private lateinit var botonPedirCalientes : Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,12 +55,14 @@ class Pedir : AppCompatActivity() {
         }
 
 
-        val botonFrios = findViewById<Button>(R.id.botonFrios)
-        val botonCalientes = findViewById<Button>(R.id.botonCalientes)
+        botonPedirFrios = findViewById(R.id.botonFrios)
+        botonPedirCalientes = findViewById(R.id.botonCalientes)
 
 
+        //Llama a la funcion de mostrar los bocadillos del dia en los botones
+        bocadilloHoy(botonPedirCalientes,botonPedirFrios)
 
-        bocadilloHoy(botonCalientes,botonFrios)
+
     }
     private fun bocadilloHoy(botonCalientes: Button, botonFrios: Button) {
         // Cargar los JSON
@@ -73,6 +79,22 @@ class Pedir : AppCompatActivity() {
         // Actualizar los TextViews
         botonFrios.text = bocadilloFrioHoy?.nombre ?: "No disponible"
         botonCalientes.text = bocadilloCalienteHoy?.nombre ?: "No disponible"
+
+        botonPedirFrios.setOnClickListener {
+            if (bocadilloFrioHoy != null) {
+                hacerPedido(bocadilloFrioHoy.nombre)
+            }else{
+                Toast.makeText(this, "No hay bocadillo frío disponible hoy",Toast.LENGTH_SHORT).show()
+            }
+        }
+        botonPedirCalientes.setOnClickListener {
+            if (bocadilloCalienteHoy != null) {
+                hacerPedido(bocadilloCalienteHoy.nombre)
+            }else{
+                Toast.makeText(this, "No hay bocadillo caliente disponible hoy",Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 
 
@@ -86,6 +108,10 @@ class Pedir : AppCompatActivity() {
             e.printStackTrace()
             emptyList()
         }
+    }
+
+    private fun hacerPedido(nombreBocadillo:String){
+        Toast.makeText(this, "Pedido hecho: $nombreBocadillo", Toast.LENGTH_SHORT).show()
     }
 
 }
